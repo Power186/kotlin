@@ -27,7 +27,7 @@ class AddExceptionToThrowsFix(
         "${argumentClassFqName.shortName().asString()}::class"
     )
 
-    override fun getFamilyName() = getText()
+    override fun getFamilyName() = this.text
 
     override fun invoke(project: Project, editor: Editor?, file: KtFile) {
         val annotationEntry = element ?: return

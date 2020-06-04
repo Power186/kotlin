@@ -812,6 +812,16 @@ public class QuickFixMultiModuleTestGenerated extends AbstractQuickFixMultiModul
             runTest("idea/testData/multiModuleQuickFix/fixNativeThrowsErrors/addCancellationException2/");
         }
 
+        @TestMetadata("addCancellationException3")
+        public void testAddCancellationException3() throws Exception {
+            runTest("idea/testData/multiModuleQuickFix/fixNativeThrowsErrors/addCancellationException3/");
+        }
+
+        @TestMetadata("addCancellationException4")
+        public void testAddCancellationException4() throws Exception {
+            runTest("idea/testData/multiModuleQuickFix/fixNativeThrowsErrors/addCancellationException4/");
+        }
+
         public void testAllFilesPresentInFixNativeThrowsErrors() throws Exception {
             KotlinTestUtils.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("idea/testData/multiModuleQuickFix/fixNativeThrowsErrors"), Pattern.compile("^([^\\.]+)$"), null, true);
         }

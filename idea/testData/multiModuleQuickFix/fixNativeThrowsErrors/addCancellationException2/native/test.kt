@@ -5,5 +5,6 @@
 
 class MyException : Throwable()
 
+// Quickfix doesn't support this case:
 <caret>@Throws(exceptionClasses = [MyException::class])
 suspend fun addCE() {}
