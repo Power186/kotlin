@@ -76,7 +76,7 @@ internal fun <K, V> build(builder: MutableMap<K, V>): Map<K, V> {
 public inline fun <K, V> ConcurrentMap<K, V>.getOrPut(key: K, defaultValue: () -> V): V {
     // Do not use computeIfAbsent on JVM8 as it would change locking behavior
     return this.get(key)
-            ?: defaultValue().let { default -> this.putIfAbsent(key, default) ?: default }
+            ?: defaultValue().let { default -> default?.let { this.putIfAbsent(key, default) } ?: default }
 
 }
 
