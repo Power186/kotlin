@@ -38,6 +38,10 @@ open class TargetPlatform(val componentPlatforms: Set<SimplePlatform>) : Collect
     override fun hashCode(): Int {
         return componentPlatforms.hashCode()
     }
+
+    companion object {
+        object UnknownPlatform : TargetPlatform(emptySet())
+    }
 }
 
 /**
